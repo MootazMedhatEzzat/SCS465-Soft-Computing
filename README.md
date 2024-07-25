@@ -1,5 +1,3 @@
-Based on the uploaded PDF, here's the completed README.md for the SCS465-Soft-Computing Assignment 3:
-
 # SCS465-Soft-Computing
 ---
 
