@@ -88,7 +88,7 @@ Example:
 
 - You can use any programming language.
 - The deadline is on Wednesday, 8/11 at 11:59 pm. No late submissions are allowed.
-- Submit one compressed folder named in the following structure: ID1_MAJOR_GROUP.
+- Submit one compressed folder named in the following structure: ID_MAJOR_GROUP.
 - Cheating students will receive negative grades. Contact your TA if you have any problems during submission. Do not, under any circumstances, share or take code from your friends.
 
 ### Grading Criteria (5 marks)
