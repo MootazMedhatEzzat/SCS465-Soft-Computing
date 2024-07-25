@@ -11,6 +11,7 @@
 
 using namespace std;
 
+// Structure to define an item with weight and value
 struct Item {
     int weight;
     int value;
@@ -18,130 +19,160 @@ struct Item {
 
 class KnapsackProblem {
     private:
-        int populationSize;
-        int maxNumOfGenerations;
-        double mutationRate;
-        double calculateFitness(const Chromosome&, const vector<Item>&, int);
-        int calculateTotalWeight(const vector<bool>&, const vector<Item>&);
-        Chromosome crossover(const Chromosome&, const Chromosome&);
-        void mutate(Chromosome&);
+        int populationSize;             // Size of the population
+        int maxNumOfGenerations;        // Maximum number of generations to evolve
+        double mutationRate;            // Probability of mutation
+        double calculateFitness(const Chromosome&, const vector<Item>&, int); // Function to calculate fitness
+        int calculateTotalWeight(const vector<bool>&, const vector<Item>&);   // Function to calculate total weight
+        Chromosome crossover(const Chromosome&, const Chromosome&);           // Function to perform crossover
+        void mutate(Chromosome&);                                             // Function to perform mutation
 
     public:
-        KnapsackProblem(int, int, double);
-        void solve(const vector<Item>&, int);
+        KnapsackProblem(int, int, double);    // Constructor
+        void solve(const vector<Item>&, int); // Function to solve the problem
 };
 
+// Constructor to initialize the problem parameters
 KnapsackProblem::KnapsackProblem(int N, int numGenerations, double m) {
-    populationSize = N;
-    maxNumOfGenerations = numGenerations;
-    mutationRate = m;
+    populationSize = N;                  // Set population size
+    maxNumOfGenerations = numGenerations;// Set maximum number of generations
+    mutationRate = m;                    // Set mutation rate
 
-    // Seed the random number generator
-    srand(static_cast<unsigned int>(time(0)));
+    srand(static_cast<unsigned int>(time(0))); // Seed the random number generator
 }
 
-// The fitness function is evaluated for every chromosome and used in the selection process.
+// Function to calculate the fitness of a chromosome
 double KnapsackProblem::calculateFitness(const Chromosome& chromosome, const vector<Item>& items, int knapsackCapacity) {
-    int totalWeight = calculateTotalWeight(chromosome.getGenes(), items);
-    // Handles the infeasible solutions
+    int totalWeight = calculateTotalWeight(chromosome.getGenes(), items); // Calculate total weight of selected items
+    
+    // If the total weight exceeds the capacity, the solution is infeasible
     if (totalWeight > knapsackCapacity) {
-        return 0.0;
+        return 0.0; // Return zero fitness for infeasible solutions
     }
-    double totalValue = 0.0;
+    
+    double totalValue = 0.0; // Initialize total value
     for (int i = 0; i < chromosome.getChromosomeSize(); i++) {
-        if (chromosome.getGeneAtIndex(i) == 1) {
-            totalValue += items[i].value;
+        if (chromosome.getGeneAtIndex(i) == 1) { // If item is selected
+            totalValue += items[i].value; // Add its value to the total value
         }
     }
-    return totalValue;
+    return totalValue; // Return the total value as fitness
 }
 
+// Function to calculate the total weight of selected items in a chromosome
 int KnapsackProblem::calculateTotalWeight(const vector<bool>& genes, const vector<Item>& items) {
-    int totalWeight = 0;
+    int totalWeight = 0; // Initialize total weight
     for (int i = 0; i < genes.size(); i++) {
-        if (genes[i]) {
-            totalWeight += items[i].weight;
+        if (genes[i]) { // If gene is true (item is selected)
+            totalWeight += items[i].weight; // Add item's weight to total weight
         }
     }
-    return totalWeight;
+    return totalWeight; // Return the total weight
 }
 
-// Implements the one-point crossover operation
+// Function to perform one-point crossover between two parent chromosomes
 Chromosome KnapsackProblem::crossover(const Chromosome& parent1, const Chromosome& parent2) {
-    int numOfGenes = parent1.getChromosomeSize();
-    // Randomly generates a crossover point by generating a random number between 0 and (number of Genes - 1)
-    int crossoverPoint = rand() % numOfGenes;
-    Chromosome child(numOfGenes);
+    int numOfGenes = parent1.getChromosomeSize(); // Get number of genes in a chromosome
+    int crossoverPoint = rand() % numOfGenes;     // Select a random crossover point
+    Chromosome child(numOfGenes);                 // Create a child chromosome
+    
+    // Copy genes from parent1 to child up to the crossover point
     for (int i = 0; i < crossoverPoint; i++) {
         child.setGeneAtIndex(i, parent1.getGeneAtIndex(i));
     }
+    // Copy genes from parent2 to child from the crossover point onward
     for (int i = crossoverPoint; i < numOfGenes; i++) {
         child.setGeneAtIndex(i, parent2.getGeneAtIndex(i));
     }
-    return child;
+    return child; // Return the new child chromosome
 }
 
-// Implements the mutation operation
+// Function to mutate a chromosome based on the mutation rate
 void KnapsackProblem::mutate(Chromosome& chromosome) {
     for (int i = 0; i < chromosome.getChromosomeSize(); i++) {
-        // For each gene, generates a random number between 0 and 1
-        double randomNum = static_cast<double>(rand()) / RAND_MAX;
-        // If the random generated number is less than the mutation rate(m), then it flips the gene
-        if (randomNum < mutationRate) {
-            chromosome.setGeneAtIndex(i, !chromosome.getGeneAtIndex(i));
+        double randomNum = static_cast<double>(rand()) / RAND_MAX; // Generate a random number between 0 and 1
+        if (randomNum < mutationRate) { // If random number is less than mutation rate
+            chromosome.setGeneAtIndex(i, !chromosome.getGeneAtIndex(i)); // Flip the gene
         }
     }
 }
 
+// Function to solve the knapsack problem using a genetic algorithm
 void KnapsackProblem::solve(const vector<Item>& items, int knapsackCapacity) {
-    int numOfItems = items.size();
-    // Initializes the population by creating a vector of Chromosome objects with a size of population size
-    vector<Chromosome> population(populationSize, Chromosome(numOfItems));
+    int numOfItems = items.size(); // Get number of items available
+    vector<Chromosome> population(populationSize, Chromosome(numOfItems)); // Initialize population
+    
+    // Loop through each generation
     for (int generation = 0; generation < maxNumOfGenerations; generation++) {
-        // Calculates the fitness of each chromosome in the population
+        // Calculate fitness for each chromosome in the population
         for (int i = 0; i < populationSize; i++) {
             population[i].setFitness(calculateFitness(population[i], items, knapsackCapacity));
         }
-        // Performs rank selection to select parents for crossover based on fitness(sorts the chromosomes in the population from highest to lowest fitness)
+        
+        // Sort chromosomes by fitness in descending order
         sort(population.begin(), population.end(), [](const Chromosome& a, const Chromosome& b) {
             return a.getFitness() > b.getFitness();
         });
-        vector<Chromosome> newPopulation(populationSize);
-        // For each chromosome, calculates a rank probability based on its position in the sorted population
+
+        vector<Chromosome> newPopulation(populationSize); // New population for the next generation
+
+        // Calculate cumulative probabilities for rank-based selection
+        vector<double> cumulativeProbabilities(populationSize);
+        double totalRank = 0.0;
         for (int i = 0; i < populationSize; i++) {
-            double rankProb = static_cast<double>(i + 1) / populationSize;
-            // Generates a random number between 0 and 1 for each chromosome
-            double randomNum = static_cast<double>(rand()) / RAND_MAX;
-            // If the random generated number less than the rank probability, copies the chromosome as is to the new population.
-            if (randomNum < rankProb) {
-                newPopulation[i] = population[i];
-            } else { // Randomly selects two parents from the top half of the population and performs crossover
-                int parentIndex = rand() % (populationSize / 2);
-                newPopulation[i] = crossover(population[parentIndex], population[parentIndex + 1]);
+            totalRank += (populationSize - i); // Sum ranks
+        }
+        double sumProb = 0.0;
+        for (int i = 0; i < populationSize; i++) {
+            sumProb += (populationSize - i) / totalRank; // Calculate cumulative probability
+            cumulativeProbabilities[i] = sumProb; // Store cumulative probability
+        }
+
+        // Select chromosomes for the new population based on rank-based selection
+        for (int i = 0; i < populationSize; i++) {
+            double randomNum = static_cast<double>(rand()) / RAND_MAX; // Generate a random number
+            int selectedIndex = 0;
+            for (int j = 0; j < populationSize; j++) {
+                if (randomNum < cumulativeProbabilities[j]) { // Select based on cumulative probability
+                    selectedIndex = j;
+                    break;
+                }
+            }
+            newPopulation[i] = population[selectedIndex]; // Add selected chromosome to new population
+        }
+
+        // Apply crossover to create new offspring
+        for (int i = 0; i < populationSize; i++) {
+            if (static_cast<double>(rand()) / RAND_MAX < 0.7) { // 70% probability of crossover
+                int parent1Index = rand() % populationSize; // Select first parent
+                int parent2Index = rand() % populationSize; // Select second parent
+                newPopulation[i] = crossover(population[parent1Index], population[parent2Index]); // Perform crossover
             }
         }
-        // Applies mutation to each chromosome in the new population
+
+        // Apply mutation to the new population
         for (int i = 0; i < populationSize; i++) {
             mutate(newPopulation[i]);
         }
-        population = newPopulation;
+
+        population = newPopulation; // Replace old population with new population
     }
 
-    // Select the best chromosome from the final population
+    // Find the best chromosome in the final population
     Chromosome bestChromosome = *std::max_element(population.begin(), population.end(), [](const Chromosome& a, const Chromosome& b) {
         return a.getFitness() < b.getFitness();
     });
 
     // Output the results
     vector<bool> genes = bestChromosome.getGenes();
-    cout << "Number of selected items: " << count(genes.begin(), genes.end(), true) << endl;
-    cout << "Total value: " << bestChromosome.getFitness() << endl;
-    cout << "Total weight: " << calculateTotalWeight(bestChromosome.getGenes(), items) << endl;
+    cout << "Number of selected items: " << count(genes.begin(), genes.end(), true) << endl; // Output number of selected items
+    cout << "Total value: " << bestChromosome.getFitness() << endl; // Output total value of selected items
+    cout << "Total weight: " << calculateTotalWeight(bestChromosome.getGenes(), items) << endl; // Output total weight
 
     cout << "Selected items:" << endl;
     for (int i = 0; i < items.size(); i++) {
-        if (bestChromosome.getGeneAtIndex(i)) {
-            cout << "Weight: " << items[i].weight << ", Value: " << items[i].value << endl;
+        if (bestChromosome.getGeneAtIndex(i)) { // If item is selected
+            cout << "Weight: " << items[i].weight << ", Value: " << items[i].value << endl; // Output item details
         }
     }
 }
