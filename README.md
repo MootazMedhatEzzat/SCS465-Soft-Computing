@@ -43,8 +43,8 @@ non-linear relationship between the features and target.
 
 Implement a feedforward neural network (from scratch) that predicts the cement 
 strength. This FFNN should have 3 layers: input, hidden, and output.
-• Use only ONE hidden layer.
-• Use Sigmoid activation function for the hidden layer.
+- Use only ONE hidden layer.
+- Use Sigmoid activation function for the hidden layer.
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/b92251ed-bd31-4da4-9a54-032c88ca908c" alt="image">
