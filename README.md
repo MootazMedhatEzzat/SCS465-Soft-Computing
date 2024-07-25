@@ -38,6 +38,10 @@ Soft Computing Course (Spring 2024)
 
 A “Fuzzy Logic Toolbox” provides functions and apps for designing and simulating fuzzy logic systems. It lets the user specify and configure input variables, output variables, membership functions, rules, and defuzzification methods. An example of such a toolbox is MATLAB’s Fuzzy Logic Toolbox™.
 
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/03fba8ca-d367-42cb-92a5-32acf253e352" alt="image">
+</div>
+
 ### What You Are Required to Do
 
 Build a simple fuzzy logic toolbox and test it on a well-known problem. In this fuzzy logic toolbox, the user can:
