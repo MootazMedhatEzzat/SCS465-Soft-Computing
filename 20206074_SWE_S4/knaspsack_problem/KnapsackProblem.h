@@ -114,11 +114,9 @@ void KnapsackProblem::solve(const vector<Item>& items, int knapsackCapacity) {
             double randomNum = static_cast<double>(rand()) / RAND_MAX;
             // If the random generated number less than the rank probability, copies the chromosome as is to the new population.
             if (randomNum < rankProb) {
-                cout << "copiesAsIt: " << i << endl;
                 newPopulation[i] = population[i];
             } else { // Randomly selects two parents from the top half of the population and performs crossover
                 int parentIndex = rand() % (populationSize / 2);
-                cout << "parentIndex: " << parentIndex << endl;
                 newPopulation[i] = crossover(population[parentIndex], population[parentIndex + 1]);
             }
         }
