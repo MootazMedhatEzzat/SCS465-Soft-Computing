@@ -22,13 +22,11 @@
 
 ---
 
-## Assignment 2
+## Assignment 2: Smooth Curve Fitting Problem
 
 Cairo University  
 Faculty of Computers and Artificial Intelligence  
 Soft Computing Course (Spring 2024) 
-
-### Assignment 2: Smooth Curve Fitting Problem
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/182f2dd1-c856-4004-aff1-07329213c618" alt="image">
