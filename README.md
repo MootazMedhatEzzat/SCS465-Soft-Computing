@@ -70,3 +70,14 @@ Note: You can implement any additional classes you need (e.g., `Layer`, `Neuron`
 - 📅 The **deadline** is on Wednesday, 20/12 at 11:59 PM.
 - 📂 Please submit one compressed folder. The folder name should follow this structure: `ID_Major_GROUP.zip` (Major should be CS, BIO, or SWE).
 - ❌ Cheating students will receive negative grades, and no excuses will be accepted. If you encounter any problems during your submission, contact your TA, but **do not** share your code with or take the code from your friends.
+
+---
+
+## 💬 Let's Connect
+Feel free to reach out to me if you'd like to collaborate on a project or discuss technology! As a Software Engineer, I'm always open to tackling new challenges, sharing knowledge, and growing through collaborative opportunities.
+
+**Mootaz Medhat Ezzat Abdelwahab**  
+🎓 Software Engineering Graduate | Faculty of Computers and Artificial Intelligence, Cairo University  
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mootaz-medhat-ezzat-abdelwahab-377a60244)
+
