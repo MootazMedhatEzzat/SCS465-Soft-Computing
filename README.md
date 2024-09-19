@@ -102,6 +102,8 @@ Example:
 - 🔄 Selection, crossover, mutation, and replacement: 3
 - 📝 Output: 0.5
 
+---
+
 ### 🛠️ Programming Language and Development Tools Used
 
 <table align="center" border="1" cellpadding="10">
