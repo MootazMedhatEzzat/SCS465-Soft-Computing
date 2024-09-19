@@ -104,6 +104,35 @@ Example:
 - 🔄 Selection, crossover, mutation, and replacement: 3
 - 📝 Output: 0.5
 
+### 🛠️ Programming Language and Development Tools Used
+
+<table align="center" border="1" cellpadding="10">
+  <thead>
+    <tr>
+      <th>Programming Language</th>
+      <th>Development Tool</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" title="C++" alt="C++" width="40" height="40"/>
+      </td>
+      <td align="center">
+        <img src="https://github.com/user-attachments/assets/1db36f07-698f-400f-bdd7-b3ad8f936f5d" title="Code::Blocks" alt="Code::Blocks" width="40" height="40"/>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        C++
+      </td>
+      <td align="center">
+        Code::Blocks IDE
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 ---
 
 ## 💬 Let's Connect
