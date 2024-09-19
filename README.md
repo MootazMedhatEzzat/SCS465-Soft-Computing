@@ -69,6 +69,8 @@ Note: You can implement any additional classes you need (e.g., `Layer`, `Neuron`
 - 📂 Please submit one compressed folder. The folder name should follow this structure: `ID_Major_GROUP.zip` (Major should be CS, BIO, or SWE).
 - ❌ Cheating students will receive negative grades, and no excuses will be accepted. If you encounter any problems during your submission, contact your TA, but **do not** share your code with or take the code from your friends.
 
+---
+
 ### 🛠️ Programming Language and Development Tools Used
 
 <table align="center" border="1" cellpadding="10">
