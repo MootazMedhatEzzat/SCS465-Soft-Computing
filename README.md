@@ -49,7 +49,7 @@ Implement a feedforward neural network (from scratch) that predicts the cement s
 
 You will be given the `concrete_data.xlsx` file which contains 700 records of concrete construction data. Each record is composed of 5 columns representing the cement, water, superplasticizer, age, and the target to be predicted, which is concrete strength.
 
-### 🔑 Important Remarks to Help You Solve the Problem
+### 🔑 Important Remarks
 
 1. 📥 **Data Loading**: Load the data from the file into appropriate structures. The features and targets should be in two separate arrays because the neural network only uses the features as its input in the forward propagation step, while the targets are used as the actual outputs in the backpropagation step. The length of each of these arrays should be equal to the number of data records. Each entry in the features array should also be an array storing the numbers in the first four columns of a record.
    
