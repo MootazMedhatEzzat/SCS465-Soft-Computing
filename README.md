@@ -235,6 +235,8 @@ Fuzzy Logic Toolbox
 - 📂 Submit one compressed folder named in the following structure: **ID_MAJOR_GROUP.zip**.
 - ❌ Cheating students will get negative grades. No excuses will be accepted. If you have any problems during submission, contact your TA. **Do no**t share or take code from your friends.
 
+---
+
 ### 🛠️ Programming Language and Development Tools Used
 
 <table align="center" border="1" cellpadding="10">
