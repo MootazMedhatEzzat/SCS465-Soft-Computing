@@ -32,7 +32,7 @@ Soft Computing Course (Spring 2024)
 
 ---
 
-### About the Problem
+### 📉 About the Problem
 
 A “Fuzzy Logic Toolbox” provides functions and apps for designing and simulating fuzzy logic systems. It lets the user specify and configure input variables, output variables, membership functions, rules, and defuzzification methods. An example of such a toolbox is MATLAB’s Fuzzy Logic Toolbox™.
 
@@ -40,7 +40,7 @@ A “Fuzzy Logic Toolbox” provides functions and apps for designing and simula
   <img src="https://github.com/user-attachments/assets/03fba8ca-d367-42cb-92a5-32acf253e352" alt="image">
 </div>
 
-### What You Are Required to Do
+### 📝 What You Are Required to Do
 
 Build a simple fuzzy logic toolbox and test it on a well-known problem. In this fuzzy logic toolbox, the user can:
 
@@ -218,18 +218,31 @@ Fuzzy Logic Toolbox
 2
 ```
 
-### Important Remarks to Help You Solve the Problem
+### 🔑 Important Remarks to Help You Solve the Problem
 
-1. Create the appropriate classes and data structures to store the system’s data.
-2. The expected fuzzy set shapes are either triangular or trapezoidal.
-3. In the “run simulation” step, perform fuzzification, inference, and defuzzification using the weighted average method.
-4. Show error messages if there is missing input or if the user enters invalid input.
-5. Test your program on the example in the lab.
+1. 🛠️ **Create the appropriate classes and data structures** to store the system’s data.
+2. The expected **fuzzy set shapes** are either **triangular** or **trapezoidal**.
+3. In the **"run simulation"** step:
+   - Perform **fuzzification** 🌀
+   - Conduct **inference** 🔄
+   - Complete **defuzzification** using the **weighted average method** ⚖️.
+4. ❗ Show **error messages** if there is:
+   - Missing input 🔍
+   - Invalid input ❌
+5. 🧪 **Test** your program using the **example provided in the lab**.
 
-### Assignment Submission Notes
+### 📤 Assignment Submission Instructions
 
-- The deadline is on Friday, 8/12 at 11:59 pm. No late submissions are allowed.
-- Submit one compressed folder named in the following structure: ID_MAJOR_GROUP.zip.
-- Cheating students will get negative grades. No excuses will be accepted. If you have any problems during submission, contact your TA. Do not share or take code from your friends.
+- 📅 The **deadline** is on Friday, 8/12 at 11:59 pm. No late submissions are allowed.
+- 📂 Submit one compressed folder named in the following structure: **ID_MAJOR_GROUP.zip**.
+- ❌ Cheating students will get negative grades. No excuses will be accepted. If you have any problems during submission, contact your TA. **Do no**t share or take code from your friends.
 
-Good luck!
+---
+
+## 💬 Let's Connect
+Feel free to reach out to me if you'd like to collaborate on a project or discuss technology! As a Software Engineer, I'm always open to tackling new challenges, sharing knowledge, and growing through collaborative opportunities.
+
+**Mootaz Medhat Ezzat Abdelwahab**  
+🎓 Software Engineering Graduate | Faculty of Computers and Artificial Intelligence, Cairo University  
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mootaz-medhat-ezzat-abdelwahab-377a60244)
