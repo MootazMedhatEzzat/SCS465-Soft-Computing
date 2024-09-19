@@ -100,6 +100,8 @@ In this example, we have 1 dataset containing 4 points, and we want to fit a 2nd
 - ♻️ Replacement: 0.5
 - 📝 Output: 1
 
+---
+
 ### 🛠️ Programming Language and Development Tools Used
 
 <table align="center" border="1" cellpadding="10">
