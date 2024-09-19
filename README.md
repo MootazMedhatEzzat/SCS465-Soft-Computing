@@ -218,7 +218,7 @@ Fuzzy Logic Toolbox
 2
 ```
 
-### 🔑 Important Remarks to Help You Solve the Problem
+### 🔑 Important Remarks
 
 1. 🛠️ **Create the appropriate classes and data structures** to store the system’s data.
 2. The expected **fuzzy set shapes** are either **triangular** or **trapezoidal**.
