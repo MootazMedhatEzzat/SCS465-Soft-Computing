@@ -22,13 +22,11 @@
 
 ---
 
-## Assignment 4
+## Assignment 4: Regression Using a Neural Network
 
 Cairo University  
 Faculty of Computers and Artificial Intelligence  
 Soft Computing Course (Spring 2024) 
-
-### Assignment 4: Regression Using a Neural Network
 
 ---
 
@@ -70,6 +68,35 @@ Note: You can implement any additional classes you need (e.g., `Layer`, `Neuron`
 - 📅 The **deadline** is on Wednesday, 20/12 at 11:59 PM.
 - 📂 Please submit one compressed folder. The folder name should follow this structure: `ID_Major_GROUP.zip` (Major should be CS, BIO, or SWE).
 - ❌ Cheating students will receive negative grades, and no excuses will be accepted. If you encounter any problems during your submission, contact your TA, but **do not** share your code with or take the code from your friends.
+
+### 🛠️ Programming Language and Development Tools Used
+
+<table align="center" border="1" cellpadding="10">
+  <thead>
+    <tr>
+      <th>Programming Language</th>
+      <th>Development Tool</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" title="C++" alt="C++" width="40" height="40"/>
+      </td>
+      <td align="center">
+        <img src="https://github.com/user-attachments/assets/1db36f07-698f-400f-bdd7-b3ad8f936f5d" title="Code::Blocks" alt="Code::Blocks" width="40" height="40"/>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        C++
+      </td>
+      <td align="center">
+        Code::Blocks IDE
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
