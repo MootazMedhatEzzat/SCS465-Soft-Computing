@@ -76,7 +76,7 @@ Example:
 2 2
 ```
 
-### 🛠️ Important Remarks to Help You Solve the Problem
+### 🔑 Important Remarks
 
 1. Use a binary, one-dimensional chromosome.
 2. The **population size** and initialization method are up to you. Try different population sizes to see how this affects your results. The maximum number of generations is also up to you.
