@@ -36,26 +36,26 @@ Soft Computing Course (Spring 2024)
 
 ---
 
-### About the Problem
+### 🎒 About the Problem
 
-The knapsack problem is a well-known optimization problem. Given a knapsack that can carry weights up to a certain amount and a number of items, each item having a weight and a value, the goal is to select the items to carry in the knapsack to maximize the total value.
+The **knapsack problem** is a well-known optimization problem. Given a knapsack that can carry weights up to a certain limit and several items, each with a weight and value, the goal is to select the items to carry in the knapsack to maximize the total value.
 
-### What You Are Required to Do
+### 📝 What You Are Required to Do
 
-Write a genetic algorithm to solve the knapsack problem. A solved example is provided in lab 1.
+Write a **genetic algorithm** to solve the knapsack problem. A solved example is provided in **Lab 1**.
 
-### Input Format
+### 📥 Input Format
 
 You’ll be given an input file with the following format:
 
-- First line: Number of test cases (must be at least 1)
+- 📄 **First line**: Number of test cases (must be at least 1)
 
 For each test case:
-- Size of the knapsack
-- Number of items
+- 🎯 **Size of the knapsack**  
+- 📦 **Number of items**
 
 For each item:
-- Weight and value separated by space
+- ⚖️ **Weight** and 💰 **value** separated by space
 
 Example:
 
@@ -76,27 +76,40 @@ Example:
 2 2
 ```
 
-### Important Remarks to Help You Solve the Problem
+### 🛠️ Important Remarks to Help You Solve the Problem
 
 1. Use a binary, one-dimensional chromosome.
-2. The population size and initialization method are up to you. Try different population sizes to see how this affects your results. The maximum number of generations is also up to you.
-3. Handle infeasible solutions (solutions that violate the constraints of the problem) appropriately.
-4. Use rank selection and one-point crossover. Choose the mutation and replacement methods that you find appropriate.
-5. The output should consist of the test case index, the number of selected items, the total value, the total weight, and the weight and value of each selected item.
+2. The **population size** and initialization method are up to you. Try different population sizes to see how this affects your results. The maximum number of generations is also up to you.
+3. Handle infeasible solutions (those that violate problem constraints) appropriately.
+4. Use **rank selection** and **one-point crossover**. Choose the mutation and replacement methods that you find appropriate.
+5. The output should consist of:
+   - 🏷️ Test case index
+   - 📊 Number of selected items
+   - 💰 Total value
+   - ⚖️ Total weight
+   - 📦 Weight and value of each selected item
 
-### Assignment Submission Notes
+### 📤 Assignment Submission Instructions
 
-- You can use any programming language.
-- The deadline is on Wednesday, 8/11 at 11:59 pm. No late submissions are allowed.
-- Submit one compressed folder named in the following structure: ID_MAJOR_GROUP.
-- Cheating students will receive negative grades. Contact your TA if you have any problems during submission. Do not, under any circumstances, share or take code from your friends.
+- You can use **any programming language**.
+- 📅 **Deadline**: Wednesday, 8/11 at 11:59 PM. No late submissions allowed.
+- 📂 Submit one compressed folder named in the following format: **ID_MAJOR_GROUP**.
+- ❌ Cheating students will receive negative grades. Contact your TA if you have any problems during submission. Do **not** share or take code from your friends.
 
-### Grading Criteria (5 marks)
+### 🏆 Grading Criteria (5 Marks)
 
-- Representation, structure, and initialization: 0.5
-- Fitness function: 0.5
-- Handling infeasible solutions: 0.5
-- Selection, crossover, mutation, and replacement: 3
-- Output: 0.5
+- 🧬 Representation, structure, and initialization: 0.5
+- 📈 Fitness function: 0.5
+- 🚫 Handling infeasible solutions: 0.5
+- 🔄 Selection, crossover, mutation, and replacement: 3
+- 📝 Output: 0.5
 
-Good luck!
+---
+
+## 💬 Let's Connect
+Feel free to reach out to me if you'd like to collaborate on a project or discuss technology! As a Software Engineer, I'm always open to tackling new challenges, sharing knowledge, and growing through collaborative opportunities.
+
+**Mootaz Medhat Ezzat Abdelwahab**  
+🎓 Software Engineering Graduate | Faculty of Computers and Artificial Intelligence, Cairo University  
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mootaz-medhat-ezzat-abdelwahab-377a60244)
