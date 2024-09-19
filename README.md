@@ -22,13 +22,11 @@
 
 ---
 
-## Assignment 1
+## Assignment 1: Knapsack Problem
 
 Cairo University  
 Faculty of Computers and Artificial Intelligence  
 Soft Computing Course (Spring 2024) 
-
-### Assignment 1: Knapsack Problem
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/5f9fc849-4fc5-4e2b-b3b5-b45fbfea1279" alt="image">
